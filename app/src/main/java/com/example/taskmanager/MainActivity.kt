@@ -166,7 +166,14 @@ fun TaskItem(modifier: Modifier, taskList: MutableList<String>, index: Int) {
             },
             // No internal padding on the other elements since it looked weird
             // and there's already external padding...
-            modifier = Modifier.padding(start = Dp(16f))
+            modifier = Modifier.padding(start = Dp(16f)),
+            colors = ButtonColors(
+                containerColor = Color(244, 67, 54, 255),
+                contentColor = Color(255,255,255),
+                // these should never appear so I won't change them
+                disabledContentColor = ButtonDefaults.buttonColors().disabledContentColor,
+                disabledContainerColor = ButtonDefaults.buttonColors().disabledContainerColor
+            )
         ) {
             Text("X")
         }
